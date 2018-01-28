@@ -46,7 +46,7 @@ describe('chatterbox', function() {
         app.send(message);
         ajaxOptions = typeof $.ajax.args[0][0] === 'object' ? $.ajax.args[0][0] : $.ajax.args[0][1];
         var result = ajaxOptions.data;
-        expect(result).to.deep.equal(message);
+        expect(JSON.parse(result)).to.deep.equal(message);
         done();
       });
 
@@ -121,7 +121,7 @@ describe('chatterbox', function() {
 
         $('#send .submit').trigger('submit');
         expect(app.handleSubmit.calledOnce).to.be.true;
-
+        console.log('hello from handle');
         app.handleSubmit.restore();
       });
     });
