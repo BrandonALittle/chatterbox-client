@@ -6,20 +6,35 @@ body {
 }
 
 #main, #chats {
-    width: 500px;
+    width: 800px;
     margin: auto;
     text-align: left;
-    background: white;
-    padding: 50px 60px;
+    background: #80a6e6;
+    padding: 30px 60px;
     border: solid #ddd;
     border-width: 0 1px 1px 1px;
+    border-radius: 4px;
+}
+
+#logo {
+  position: relative;
+  float:right;
+  width: 75px;
+  height: 75px;
+  background-image: url(../images/chatterboxLogo.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 #main h1 {
     margin-top: 0;
+    font-color: green;
     font-size: 35px;
     margin-bottom: 5px;
     padding: 5px;
+    text-shadow: 1px 2px 2px white;
+
 }
 
 #main h1 span {
@@ -46,17 +61,26 @@ body {
     line-height: 13px;
 }
 
+#chats {
+  height: auto;
+}
+
 form {
     padding: 20px;
     padding-left: 0;
     margin-bottom: 20px;
+    align-content: center;
 }
 
-form input[type=text] {
-    margin-right: 10px;
-    width: 70%;
-    font-size: 12px;
-    padding: 5px;
+.chatrooms {
+  position: relative;
+  width: 40%;
+  align-self: right;
+  margin: auto;
+  margin-bottom: 15px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 2px;
 }
 
 .chat {
@@ -88,3 +112,51 @@ form input[type=text] {
     background-color: #0090da;
 }
 
+.enter {
+    width: 100%;
+}
+
+.chatInput {
+  outline: none;
+    margin-right: 10px;
+    width: 100%;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+    resize: none;
+    font-size: 1.2em;
+}
+
+.chatInput:focus {
+  background-color: #8cc63f;
+}
+
+.chatter {
+  font-size: 1em;
+  background-color: #8cc63f;
+  margin-top: 7px;
+  padding: 7px 10px;
+  border-radius: 3px;
+  border: 1px solid black;
+}
+
+.chats {
+  width: 100%;
+  align-content: center;
+}
+
+.chats h2 {
+  width: 100%;
+  position: absolute;
+  align-self: center;
+  text-align: center;
+}
+
+.message {
+  padding: 2px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: white;
+  margin: 5px;
+  list-style-type: none;
+}
